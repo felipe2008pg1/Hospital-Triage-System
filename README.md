@@ -1,4 +1,4 @@
-# sistema-triagem-hospitalar
+# Sistema de triagem Hospitalar
 
 Segurança e Prioridade: Evoluindo na lógica de Back-end com Python 🏥
 
