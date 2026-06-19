@@ -1,59 +1,59 @@
-filatipon = []
-filatipou = []
-filatipop = []
+normalqueue = []
+urgentqueue = []
+priorityqueue = []
 
-logindosmedicos = {
-    "usuario": "admin@hospital.com", 
-    "senha": "123"
+doctorlogin = {
+    "username": "admin@hospital.com",
+    "password": "123"
 }
 
 while True:
     print("\n" + "=" * 20)
-    print(" FILA DE ATENDIMENTO!")
-    print("="*20)
-    print("N = Normal | U = Urgente | P = Prioritário | A = Área Médica")
-    
-    opcao = input("\nEscolha uma opção: ").upper()
+    print(" APPOINTMENT QUEUE!")
+    print("=" * 20)
+    print("N = Normal | U = Urgent | P = Priority | M = Medical Area")
 
-    if opcao in ["N", "U", "P"]:
-        nome = input("Digite o nome do paciente: ")
+    option = input("\nChoose an option: ").upper()
+
+    if option in ["N", "U", "P"]:
+        name = input("Enter the patient's name: ")
         try:
-            idade = int(input("Digite a idade: "))
-            dados = f"{nome} ({idade} anos)"
-            
-            if opcao == "N":
-                filatipon.append(dados)
-            elif opcao == "U":
-                filatipou.append(dados)
-            elif opcao == "P":
-                filatipop.append(dados)
-            
-            print(f"Paciente {nome} adicionado com sucesso!")
+            age = int(input("Enter the age: "))
+            data = f"{name} ({age} years old)"
+
+            if option == "N":
+                normalqueue.append(data)
+            elif option == "U":
+                urgentqueue.append(data)
+            elif option == "P":
+                priorityqueue.append(data)
+
+            print(f"Patient {name} added successfully!")
         except ValueError:
-            print("ERRO: Idade deve ser um número inteiro!")
+            print("ERROR: Age must be an integer!")
 
-    elif opcao == "A":
-        loginm = input("E-mail: ")
-        senham = input("Senha: ")
+    elif option == "M":
+        doctorusername = input("Email: ")
+        doctorpassword = input("Password: ")
 
-        if loginm == logindosmedicos["usuario"] and senham == logindosmedicos["senha"]:
+        if doctorusername == doctorlogin["username"] and doctorpassword == doctorlogin["password"]:
             while True:
-                print("\n--- PAINEL MÉDICO ---")
-                print("1 - Fila Normal\n2 - Fila Urgente\n3 - Fila Prioritária\n4 - Sair")
-                opcaomedica = input("Selecione: ")
+                print("\n--- MEDICAL PANEL ---")
+                print("1 - Normal Queue\n2 - Urgent Queue\n3 - Priority Queue\n4 - Exit")
+                medicaloption = input("Select: ")
 
-                if opcaomedica == "1":
-                    print(f"Fila Normal: {filatipon}")
-                elif opcaomedica == "2":
-                    print(f"Fila Urgente: {filatipou}")
-                elif opcaomedica == "3":
-                    print(f"Fila Prioritária: {filatipop}")
-                elif opcaomedica == "4":
+                if medicaloption == "1":
+                    print(f"Normal Queue: {normalqueue}")
+                elif medicaloption == "2":
+                    print(f"Urgent Queue: {urgentqueue}")
+                elif medicaloption == "3":
+                    print(f"Priority Queue: {priorityqueue}")
+                elif medicaloption == "4":
                     break
                 else:
-                    print("Opção inválida.")
+                    print("Invalid option.")
         else:
-            print("Login ou senha incorretos.")
+            print("Incorrect username or password.")
 
     else:
-        print("Opção inválida.")
+        print("Invalid option.")
