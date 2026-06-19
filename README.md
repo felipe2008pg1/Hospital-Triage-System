@@ -1,4 +1,4 @@
-# Hospital Triage System
+# 🏥 Hospital Triage System
 
 Security and Priority: Evolving Back-end Logic with Python 🏥
 
