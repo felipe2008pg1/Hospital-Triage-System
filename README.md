@@ -1,15 +1,12 @@
-# Sistema de triagem Hospitalar
+# Hospital Triage System
 
-Segurança e Prioridade: Evoluindo na lógica de Back-end com Python 🏥
+Security and Priority: Evolving Back-end Logic with Python 🏥
 
-Dando continuidade aos meus estudos no Senac Palhoça, desenvolvi um Sistema de Triagem Hospitalar.
+Continuing my studies at Senac Palhoça, I developed a Hospital Triage System.
 
-Neste projeto, decidi dar um passo além da manipulação de dados básica e foquei em dois pilares essenciais para qualquer desenvolvedor de software:
+In this project, I decided to go beyond basic data manipulation and focused on two essential pillars for any software developer:
 
-Segurança de Acesso: Implementei um painel restrito para médicos com autenticação via dicionários.
+- Access Security: I implemented a restricted panel for doctors with authentication via dictionaries.
+- Code Resilience: I applied exception handling (try/except) to ensure that the software correctly handles user input errors without interrupting the service.
 
-Resiliência do Código: Apliquei tratamento de exceções (try/except) para garantir que o software lide corretamente com erros de input do usuário, sem interromper o serviço.
-
-Entender a regra de negócio — como o fluxo de uma fila de hospital — e traduzir isso em código eficiente é o que mais me motiva no desenvolvimento Back-end.
-
-#Python #SoftwareEngineering #Backend #DesenvolvimentoWeb #Senac #LogicaDeProgramação
+Understanding the business rules—such as the flow of a hospital queue—and translating that into efficient code is what motivates me most in back-end development.
